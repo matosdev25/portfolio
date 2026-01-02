@@ -15,6 +15,7 @@ const Counter = ({ end, suffix, duration = 2000 }) => {
   const counterRef = useRef(null);
 
   useEffect(() => {
+    const currentRef = counterRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !isVisible) {
@@ -24,13 +25,13 @@ const Counter = ({ end, suffix, duration = 2000 }) => {
       { threshold: 0.5 }
     );
 
-    if (counterRef.current) {
-      observer.observe(counterRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (counterRef.current) {
-        observer.unobserve(counterRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, [isVisible]);
