@@ -42,7 +42,9 @@ const Counter = ({ end, suffix, duration = 2000 }) => {
       const step = (timestamp) => {
         if (!startTime) startTime = timestamp;
         const progress = Math.min((timestamp - startTime) / duration, 1);
-        setCount(Math.floor(progress * end));
+        // Easing function for smoother animation
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        setCount(Math.floor(easeOutQuart * end));
         if (progress < 1) {
           requestAnimationFrame(step);
         }
@@ -60,28 +62,35 @@ const Counter = ({ end, suffix, duration = 2000 }) => {
 
 const Counters = () => {
   return (
-    <section className="py-20 bg-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-black"></div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-          {counters.map((counter) => {
+          {counters.map((counter, index) => {
             const IconComponent = iconMap[counter.icon];
             return (
               <div
                 key={counter.id}
-                className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-lg p-8 text-center transition-all duration-300 hover:border-red-500 hover:shadow-xl hover:shadow-red-500/20"
+                className="group relative bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 text-center transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:shadow-2xl hover:shadow-red-500/20 hover:scale-105 overflow-hidden"
+                style={{ animationDelay: `${index * 150}ms` }}
               >
+                {/* Animated gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-red-500/0 via-pink-500/0 to-red-500/0 group-hover:from-red-500/10 group-hover:via-pink-500/5 group-hover:to-red-500/10 transition-all duration-500"></div>
+                
                 {/* Icon */}
-                <div className="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="text-red-500" size={32} />
+                <div className="relative w-16 h-16 bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 backdrop-blur-xl border border-white/10">
+                  <IconComponent className="text-red-400" size={32} />
                 </div>
                 
                 {/* Number */}
-                <div className="font-display text-4xl sm:text-5xl font-bold text-white mb-2">
+                <div className="relative font-display text-4xl sm:text-5xl font-bold text-white mb-2 tracking-wider">
                   <Counter end={counter.number} suffix={counter.suffix} />
                 </div>
                 
                 {/* Label */}
-                <div className="text-gray-400 text-sm font-medium uppercase tracking-wide">
+                <div className="relative text-gray-400 text-sm font-medium uppercase tracking-wider">
                   {counter.label}
                 </div>
               </div>
