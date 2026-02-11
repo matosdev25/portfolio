@@ -75,7 +75,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white p-2 hover:text-red-500 transition-colors"
+            className="md:hidden text-white p-2 hover:bg-white/10 rounded-xl transition-all duration-300 backdrop-blur-xl"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -85,21 +85,21 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-black/95 backdrop-blur-lg border-t border-gray-800">
+        <div className="md:hidden bg-black/40 backdrop-blur-3xl border-t border-white/10 shadow-2xl">
           <div className="px-4 py-6 space-y-4">
             {navLinks.map((link) => (
               <a
                 key={link.id}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="block text-gray-300 hover:text-red-500 transition-colors duration-200 py-2 text-base font-medium"
+                className="block text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-300 py-3 px-4 text-base font-medium rounded-xl"
               >
                 {link.label}
               </a>
             ))}
             <button
               onClick={handleWhatsAppClick}
-              className="w-full bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200"
+              className="w-full bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg shadow-red-500/50"
             >
               Hablemos
             </button>
