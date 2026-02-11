@@ -23,14 +23,18 @@ const Hero = () => {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-90 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-gray-900/70 to-black/80 z-10 backdrop-blur-sm"></div>
         <img 
           src="https://images.pexels.com/photos/3653997/pexels-photo-3653997.jpeg" 
           alt="Hero Background"
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-30"
         />
-        {/* Red accent gradient */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-red-500/20 via-transparent to-transparent z-10"></div>
+        {/* Red accent gradient - more subtle */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-red-500/10 via-transparent to-pink-500/10 z-10"></div>
+        {/* Noise texture overlay for depth */}
+        <div className="absolute inset-0 z-10 opacity-[0.015]" style={{
+          backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 400 400\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' /%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\' /%3E%3C/svg%3E")'
+        }}></div>
       </div>
 
       {/* Content */}
