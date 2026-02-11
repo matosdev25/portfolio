@@ -58,14 +58,15 @@ const Navbar = () => {
                 key={link.id}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="text-gray-300 hover:text-red-500 transition-colors duration-200 text-sm font-medium"
+                className="text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium relative group"
               >
                 {link.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-500 to-pink-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
               </a>
             ))}
             <button
               onClick={handleWhatsAppClick}
-              className="bg-red-500 hover:bg-red-600 text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:shadow-red-500/50 hover:scale-105"
+              className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/50 hover:scale-105 backdrop-blur-xl"
             >
               Hablemos
             </button>
