@@ -46,9 +46,9 @@ const Navbar = () => {
             <img 
               src="https://customer-assets.emergentagent.com/job_modern-matos-ui/artifacts/i5k1wrrb_Marti%CC%81n%20Twitch%20rojo-%20no%20BK-01.png" 
               alt="MatosDev Logo" 
-              className="h-10 w-10 transition-transform duration-300 group-hover:scale-110"
+              className="h-10 w-10 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 drop-shadow-lg"
             />
-            <span className="font-display text-2xl font-bold text-white">MATOSDEV</span>
+            <span className="font-display text-2xl font-bold text-white tracking-wider">MATOSDEV</span>
           </a>
 
           {/* Desktop Navigation */}
