@@ -176,34 +176,36 @@ body {
   animation: bounce 2s infinite;
 }
 
-/* Focus styles for accessibility */
+/* Focus styles for accessibility - iOS style */
 *:focus-visible {
-  outline: 2px solid #ef4444;
-  outline-offset: 2px;
+  outline: 3px solid rgba(239, 68, 68, 0.5);
+  outline-offset: 3px;
+  border-radius: 8px;
 }
 
 /* Selection styles */
 ::selection {
-  background-color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.3);
   color: #ffffff;
 }
 
-/* Scrollbar styles */
+/* Scrollbar styles - iOS inspired */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1f2937;
-  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ef4444;
+  background: rgba(239, 68, 68, 0.5);
 }
 
 /* Smooth transitions for interactive elements */
@@ -211,7 +213,7 @@ button,
 a,
 input,
 textarea {
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* Remove default button styles */
@@ -222,13 +224,39 @@ button {
   font-family: inherit;
 }
 
-/* Input and textarea base styles */
+/* Input and textarea base styles - iOS style */
 input,
 textarea {
   font-family: inherit;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 input:focus,
 textarea:focus {
   outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(239, 68, 68, 0.5);
+  box-shadow: 
+    0 0 0 4px rgba(239, 68, 68, 0.1),
+    0 8px 24px rgba(239, 68, 68, 0.15);
+  transform: scale(1.01);
+}
+
+/* iOS-style text rendering */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Frosted glass effect for overlays */
+.frosted-glass {
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
 }
