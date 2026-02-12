@@ -22,7 +22,7 @@ export const projects = [
       'Optimizado para SEO y performance'
     ],
     image: '/projects/Grafik2.png',
-    demoUrl: '#',
+    demoUrl: 'https://matosdev25.github.io/under-construction/',
     codeUrl: '#'
   },
   {
@@ -35,7 +35,7 @@ export const projects = [
       'Diseño centrado en conversión'
     ],
     image: '/projects/EurekaServicios.png',
-    demoUrl: '#',
+    demoUrl: 'https://matosdev25.github.io/under-construction/',
     codeUrl: '#'
   },
   {
@@ -47,9 +47,9 @@ export const projects = [
       'Diseño centrado en conversión',
       'Performance 95+ en Lighthouse'
     ],
-    image: 'https://images.unsplash.com/photo-1615532316696-3116b1df3ee9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhYnN0cmFjdHxlbnwwfHx8fDE3NjczODQxNDJ8MA&ixlib=rb-4.1.0&q=85',
-    demoUrl: '#',
-    codeUrl: '#'
+    image: '/projects/enconstruccion.png',
+    demoUrl: 'https://matosdev25.github.io/under-construction/',
+    codeUrl: 'https://github.com/matosdev25/under-construction.git'
   }
 ];
 

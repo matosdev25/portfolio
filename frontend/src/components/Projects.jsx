@@ -31,8 +31,8 @@ const Projects = () => {
               {/* Project Image */}
               <div className="relative h-56 overflow-hidden">
                 <img
-                  src={project.image}
-                  alt={project.name}
+                  src={`${process.env.PUBLIC_URL}${project.image}`}
+                  alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-70 group-hover:opacity-50 transition-opacity duration-500"></div>

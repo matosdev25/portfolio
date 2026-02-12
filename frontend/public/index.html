@@ -1,63 +1,70 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#ef4444" />
-        <meta name="description" content="MatosDev - Desarrollo Web & UI/UX. Diseño interfaces modernas y construyo sitios y apps rápidas, 100% responsivas con Next.js. Contacta para tu proyecto." />
-        <meta name="keywords" content="desarrollo web, diseño UI/UX, Next.js, React, diseño responsive, frontend developer, web design, Panamá" />
-        <meta name="author" content="MatosDev" />
-        
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="MatosDev - Desarrollo Web & UI/UX" />
-        <meta property="og:description" content="Diseño interfaces modernas y construyo sitios y apps rápidas, 100% responsivas con Next.js" />
-        <meta property="og:image" content="https://customer-assets.emergentagent.com/job_modern-matos-ui/artifacts/i5k1wrrb_Marti%CC%81n%20Twitch%20rojo-%20no%20BK-01.png" />
-        
-        <!-- Twitter -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="MatosDev - Desarrollo Web & UI/UX" />
-        <meta name="twitter:description" content="Diseño interfaces modernas y construyo sitios y apps rápidas, 100% responsivas con Next.js" />
-        <meta name="twitter:image" content="https://customer-assets.emergentagent.com/job_modern-matos-ui/artifacts/i5k1wrrb_Marti%CC%81n%20Twitch%20rojo-%20no%20BK-01.png" />
-        <!--
-        manifest.json provides metadata used when your web app is installed on a
-        user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-        -->
-        <!--
-        Notice the use of %PUBLIC_URL% in the tags above.
-        It will be replaced with the URL of the `public` folder during the build.
-        Only files inside the `public` folder can be referenced from the HTML.
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ef4444" />
+  <meta
+    name="description"
+    content="MatosDev - Desarrollo Web & UI/UX. Diseño interfaces modernas y construyo sitios y apps rápidas, 100% responsivas con Next.js. Contacta para tu proyecto."
+  />
+  <meta
+    name="keywords"
+    content="desarrollo web, diseño UI/UX, Next.js, React, diseño responsive, frontend developer, web design, Panamá"
+  />
+  <meta name="author" content="MatosDev" />
 
-        Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-        work correctly both with client-side routing and a non-root public URL.
-        Learn how to configure a non-root public URL by running `npm run build`.
-        -->
-        <title>MatosDev - Desarrollo Web & UI/UX | Portfolio</title>
-        <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
-        <!--
-        These two scripts have been added for the Visual Edits, please do not edit or remove them
-        -->
-        <script>
-            // Only load visual edit scripts when inside an iframe
-            if (window.self !== window.top) {
-                // Load debug monitor script
-                var debugMonitorScript = document.createElement('script');
-                debugMonitorScript.src = 'https://assets.emergent.sh/scripts/debug-monitor.js';
-                document.head.appendChild(debugMonitorScript);
+  <!-- Favicon / App Icons (PUBLIC_URL compatible con GitHub Pages) -->
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-                // Configure Tailwind
-                window.tailwind = window.tailwind || {};
-                tailwind.config = {
-                    corePlugins: { preflight: false },
-                };
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MatosDev - Desarrollo Web & UI/UX" />
+  <meta
+    property="og:description"
+    content="Diseño interfaces modernas y construyo sitios y apps rápidas, 100% responsivas con Next.js"
+  />
+  <meta
+    property="og:image"
+    content="https://customer-assets.emergentagent.com/job_modern-matos-ui/artifacts/i5k1wrrb_Marti%CC%81n%20Twitch%20rojo-%20no%20BK-01.png"
+  />
 
-                // Load Tailwind CDN
-                var tailwindScript = document.createElement('script');
-                tailwindScript.src = 'https://cdn.tailwindcss.com';
-                document.head.appendChild(tailwindScript);
-            }
-        </script>
-    </head>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MatosDev - Desarrollo Web & UI/UX" />
+  <meta
+    name="twitter:description"
+    content="Diseño interfaces modernas y construyo sitios y apps rápidas, 100% responsivas con Next.js"
+  />
+  <meta
+    name="twitter:image"
+    content="https://customer-assets.emergentagent.com/job_modern-matos-ui/artifacts/i5k1wrrb_Marti%CC%81n%20Twitch%20rojo-%20no%20BK-01.png"
+  />
+
+  <title>MatosDev - Desarrollo Web & UI/UX | Portfolio</title>
+
+  <!-- Emergent scripts (opcional: déjalo solo si seguirás usando Visual Edits) -->
+  <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
+  <script>
+    // Only load visual edit scripts when inside an iframe
+    if (window.self !== window.top) {
+      var debugMonitorScript = document.createElement('script');
+      debugMonitorScript.src =
+        'https://assets.emergent.sh/scripts/debug-monitor.js';
+      document.head.appendChild(debugMonitorScript);
+
+      window.tailwind = window.tailwind || {};
+      tailwind.config = { corePlugins: { preflight: false } };
+
+      var tailwindScript = document.createElement('script');
+      tailwindScript.src = 'https://cdn.tailwindcss.com';
+      document.head.appendChild(tailwindScript);
+    }
+  </script>
+</head>
+
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root"></div>
