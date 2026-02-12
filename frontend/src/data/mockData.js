@@ -1,40 +1,40 @@
 export const projects = [
   {
     id: 1,
-    name: 'E-Commerce Platform',
-    description: 'Plataforma de comercio electrónico moderna y responsive',
-    stack: ['Next.js', 'React', 'Tailwind CSS', 'Stripe'],
+    name: 'Donde la chomba',
+    description: 'Proyecto que realza la modernidad y menu del restaurante',
+    stack: ['HTML', 'CSS3', 'JavaScript'],
     results: [
       'Diseño responsive y mobile-first',
-      'Integración de pagos segura'
+      'Integración de mapa con ubicación real'
     ],
-    image: 'https://images.unsplash.com/photo-1709626011485-6fe000ea2dbc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxnZW9tZXRyaWMlMjBhYnN0cmFjdHxlbnwwfHx8fDE3NjczODQxMzZ8MA&ixlib=rb-4.1.0&q=85',
-    demoUrl: '#',
-    codeUrl: '#'
+    image: '/projects/Donde-La-Chomba.png',
+    demoUrl: 'https://matosdev25.github.io/Donde-La-Chomba/',
+    codeUrl: 'https://github.com/matosdev25/Donde-La-Chomba.git'
   },
   {
     id: 2,
-    name: 'Portfolio Website',
-    description: 'Sitio web de portfolio minimalista para profesional creativo',
+    name: 'GRAFIK2®',
+    description: 'Sitio web de portfolio minimalista inspirado en iOS26 para profesional creativo',
     stack: ['HTML5', 'CSS3', 'JavaScript', 'GSAP'],
     results: [
       'Animaciones fluidas y atractivas',
       'Optimizado para SEO y performance'
     ],
-    image: 'https://images.unsplash.com/photo-1595411425732-e69c1abe2763?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwyfHxnZW9tZXRyaWMlMjBhYnN0cmFjdHxlbnwwfHx8fDE3NjczODQxMzZ8MA&ixlib=rb-4.1.0&q=85',
+    image: '/projects/Grafik2.png',
     demoUrl: '#',
     codeUrl: '#'
   },
   {
     id: 3,
-    name: 'SaaS Dashboard',
-    description: 'Dashboard administrativo con métricas en tiempo real',
+    name: 'eureka servicios',
+    description: 'Landing page de alta conversión para servicio de bricolaje',
     stack: ['Next.js', 'TypeScript', 'Recharts', 'Prisma'],
     results: [
       'Interfaz intuitiva y funcional',
-      'Visualización de datos en tiempo real'
+      'Diseño centrado en conversión'
     ],
-    image: 'https://images.unsplash.com/photo-1619350280773-188ac188d3e9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHw0fHxnZW9tZXRyaWMlMjBhYnN0cmFjdHxlbnwwfHx8fDE3NjczODQxMzZ8MA&ixlib=rb-4.1.0&q=85',
+    image: '/projects/EurekaServicios.png',
     demoUrl: '#',
     codeUrl: '#'
   },
