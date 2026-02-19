@@ -29,22 +29,22 @@ export const projects = [
     id: 3,
     name: 'eureka servicios',
     description: 'Landing page de alta conversión para servicio de bricolaje',
-    stack: ['Next.js', 'TypeScript', 'Recharts', 'Prisma'],
+    stack: ['Next.js', 'JavaScript', 'CSS', 'Python'],
     results: [
       'Interfaz intuitiva y funcional',
       'Diseño centrado en conversión'
     ],
     image: '/projects/EurekaServicios.png',
-    demoUrl: 'https://matosdev25.github.io/under-construction/',
-    codeUrl: '#'
+    demoUrl: 'https://matosdev25.github.io/EurekaServicios/',
+    codeUrl: 'https://github.com/matosdev25/EurekaServicios.git'
   },
   {
     id: 4,
     name: 'Landing Page',
-    description: 'Landing page de alta conversión para startup tech',
-    stack: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
+    description: 'Landing page indicativa para proyecto personal en construcción, enfocada en diseño moderno y performance',
+    stack: ['JavaScript', 'Tailwind CSS', 'HTML5'],
     results: [
-      'Diseño centrado en conversión',
+      'Diseño centrado en UX y performance',
       'Performance 95+ en Lighthouse'
     ],
     image: '/projects/enconstruccion.png',
